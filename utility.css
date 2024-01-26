@@ -1,0 +1,13 @@
+.flex{
+    display: flex;
+}
+.justify{
+    justify-content: center;
+}
+.align{
+    align-items: center;
+    font-size: larger;
+}
+.invert{
+    filter: invert(1);
+}

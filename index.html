@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar flex align">
+            <div class="img">
+                <h1>Mohit's Portfolio</h1>
+            </div>
+            <div class="list">
+                <ul class="nav flex">
+                    <img src="imgs/close.svg" alt="" width="30px" class="invert close">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <img src="imgs/bars.svg" alt="" width="30px" class="invert bars">
+            </div>
+        </div>
+        <div class="header1 flex">
+            <div class="text">
+                <h2 style="font-size: 30px; margin-bottom: 15px;">Web Developer</h2>
+                <p style="font-size: 50px;font-weight: bolder;">Hi I'm Mohit Lalwani</p>
+                <p style="font-size: 50px; font-weight: bolder;">From India</p>
+            </div>
+            <div class="portfolio">
+                <img src="imgs/developer.png" alt="" width="500vw">
+            </div>
+        </div>
+    </div>
+<!-- <----------about------------->
+    <div id="about" class="flex">
+        <div class="user">
+            <img src="imgs/user.png" alt="" width="400px" style="border-radius: 15px;">
+        </div>
+        <div class="usertext">
+            <h1 style="font-size: 45px;">About Me</h1>
+            <p style="margin-top: 3vh; margin-bottom: 3vh; line-height: 25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id reiciendis optio deleniti nostrum. Id nisi culpa modi optio minima amet rem minus rerum officia! Iure eos a sed delectus? Sapiente, aperiam impedit nihil, recusandae adipisci mollitia velit quis quibusdam architecto molestiae, numquam incidunt aut expedita saepe consequuntur fugiat quod vitae.
+            </p>
+            <div class="skills flex">
+                <p class="link active-link" onclick="opentab('skills')">Skills</p>
+                <p class="link" onclick="opentab('experience')">Experience</p>
+                <p class="link" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                    <li><span>Web Development</span><br>Web app development</li>
+                    <li><span>App Development</span><br>Building Android/ios apps</li>
+                </ul>
+            </div>
+            <div class="contents" id = "experience">
+                <ul>
+                    <li><span>2023-Current</span><br>Designing Web/App Interfaces</li>
+                    <li><span>2021-2023</span><br>Web app development</li>
+                    <li><span>2018-2021</span><br>Building Android/ios apps</li>
+                </ul>
+            </div>
+            <div class="contents" id = "education">
+                <ul>
+                    <li><span>2023-Current</span><br>B.tech from NIT SILCHAR</li>
+                    <li><span>2021-2023</span><br>Higher Schooling form Sanskar Public School</li>
+                    <li><span>2006-2021</span><br>Secondary Schooling from St.Teresa's School</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ <!-- <----------services------------->
+    <div id="Services">
+        <h1 style="font-size: 50px;">MY SERVICES</h1>
+        <div class="boxes flex">
+        <div class="box">
+            <h2>Web Development</h2>
+            <img src="imgs/code.svg" class="invert" width="30px">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam a dolorem quibusdam porro maiores molestias?
+            </p>
+           <p style="margin-top: 0.5vh;"><a href="#">Learn more</a></p>
+        </div>
+        <div class="box">
+            <h2>UI/UX Development</h2>
+            <img src="imgs/crop.svg" class="invert" width="25px">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam a dolorem quibusdam porro maiores molestias?
+            </p>
+           <p style="margin-top: 0.5vh;"><a href="#">Learn more</a></p>
+        </div>
+        <div class="box">
+            <h2>App Development</h2>
+            <img src="imgs/app.svg" class="invert" width="25px">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam a dolorem quibusdam porro maiores molestias?
+            </p>
+           <p style="margin-top: 0.5vh;"><a href="#">Learn more</a></p>
+        </div>
+        </div>
+    </div>
+    <!-- <-----------portfolio -->
+        <div id="portfolio">
+            <h1 style="font-size: 45px;">MY WORK</h1>
+            <div class="boxe flex">
+            <div class="b">
+                <img src="imgs/work-1.png" >
+                <div class="layer" style="text-align: center;">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aliquid, qui amet quia natus reiciendis!</p>
+                    <a href="https://mohit625.github.io/college/"><img src="imgs/link.svg" class="invert" width="25px"></a>
+                </div>
+            </div>
+            <div class="b">
+                <img src="imgs/work-2.png" >
+                <div class="layer" style="text-align: center;">
+                    <h3>Music App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aliquid, qui amet quia natus reiciendis!</p>
+                    <a href="https://spotify-cloaning.freewebhostmost.com/"><img src="imgs/link.svg" class="invert" width="25px"></a>
+                </div>
+            </div>
+            <div class="b">
+                <img src="imgs/work-3.png" >
+                <div class="layer" style="text-align: center;">
+                    <h3>Online-Shopping App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aliquid, qui amet quia natus reiciendis!</p>
+                    <a href="https://mohit625.github.io/amazon-clone/"><img src="imgs/link.svg" class="invert" width="25px"></a>
+                </div>
+            </div>
+            </div>
+            <button >Show More</button>
+        </div>
+        <!-- <-----------contact -->
+            <div id="contact">
+                <div class="left">
+                    <h1 style="font-size: 50px;margin-bottom: 8vh;">Contact Me</h1>
+                    
+                    <p><img src="imgs/plane.svg" width="20px">&nbsp;&nbsp;<span style="font-size: 20px;">1234@gmail.com</span></p>
+                    <p><img src="imgs/phone.svg" width="20px">&nbsp;&nbsp;<span style="font-size: 20px;">0123456789</span></p>
+                    <p style="display: flex;gap: 3vw;margin-top: 4vh;">
+                        <a href="https://www.facebook.com/profile.php?id=61551169986325"><img src="imgs/facebook.svg" width="35vw" class="invert"></a>
+                        <a href="https://www.instagram.com/mohitlalwani49/"><img src="imgs/instagram.svg" width="35vw" class="invert"></a>
+                        <a href="https://twitter.com/La50503186Mohit"><img src="imgs/twitter.svg" width="35vw" class="invert"></a>
+                        <a href="https://www.linkedin.com/in/mohit-lalwani-603239297/"><img src="imgs/linkedin.svg" width="35vw" class="invert"></a>
+                    </p>
+                    <button><a href="imgs/cv.pdf" download >Download CV</a></button>
+                </div>
+                <div class="right">
+                    <form>
+                        <input type="text" placeholder="Your Name" id="name" required>
+                        <input type="email" placeholder="Your email" id="email" required>
+                        <textarea cols="30" rows="8" placeholder="Your Message" id="text"></textarea>
+                        <button class="submit" style="margin-left: 30%;color: white;width: 25%;" >Submit</button>
+                    </form>
+                </div>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                document.querySelector(".submit").addEventListener("click",()=>{
+                    sendemail();
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("text").value = "";
+                });
+                function sendemail(){
+                Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "mohit_ug_23@ee.nits.ac.in",
+            Password : "B9646D8A500C8F1EC6B6A3D896EB7BE6069B",
+            To : "mohit_ug_23@ee.nits.ac.in",
+            From : "mohit_ug_23@ee.nits.ac.in",
+            Subject : "new login form",
+            Body : `Name : ${document.getElementById("name").value}<br>Email : ${document.getElementById("email").value}<br>Message : ${document.getElementById("text").value}`,
+        }).then(
+          message => alert("Message Sent Successfully")
+        );}
+            </script>
+    <script src="script.js"></script>
+</body>
+</html>
