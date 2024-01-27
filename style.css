@@ -14,8 +14,7 @@ body{
 .navbar{
     justify-content: space-between;
     padding: 1vh 8vw;
-    position: fixed;
-    width: 100vw;
+    width: 100%;
     background: transparent;
     z-index: 10;
     /* padding-left: 10vw;
@@ -38,7 +37,7 @@ a{
 .header1{
     justify-content: space-between;
     padding: 5vh;
-    padding-top: 25vh;
+    padding-top: 2vh;
     padding-left: 10vw;
     padding-right: 6vw;
 }
@@ -244,23 +243,17 @@ a{
     border-radius: 5px;
     color: white;
 }
-@media (min-width:768px){
-    .navbar.scrolled{
-        background: transparent;
-        padding: 2vh 8vw;
-        width: 100%;
-        font-size: x-large;
-        font-weight: bolder;
-    }
-}
 @media (max-width: 768px){
+    .text{
+        padding-top: 5vh;
+    }
     .img img{
         width: 30vw;
     }
     .header1{
         flex-direction: column;
         gap: 5vh;
-        padding-top: 3vh;
+        padding-top: 0vh;
     }
     .portfolio img{
         width: 100%;
