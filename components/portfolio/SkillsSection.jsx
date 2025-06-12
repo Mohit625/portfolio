@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wrench, Hammer, Tool, GhostIcon, HamIcon } from "lucide-react";
+import { Wrench} from "lucide-react";
 const SkillsSection = () => {
   const skillCategories = [
     {
@@ -54,7 +54,6 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Terminal prompt */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +64,6 @@ const SkillsSection = () => {
           $ cat skills.json
         </motion.div>
 
-        {/* Section title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +74,6 @@ const SkillsSection = () => {
           Skills & Technologies
         </motion.h2>
 
-        {/* Skills grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div

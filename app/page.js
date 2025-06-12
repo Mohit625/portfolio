@@ -8,13 +8,12 @@ import EducationSection from "@/components/portfolio/EducationSection";
 import SkillsSection from "@/components/portfolio/SkillsSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
+import Blog from "@/components/portfolio/Blog";
 
 export default function Home() {
   useEffect(() => {
-    // Add smooth scrolling behavior to the entire page
     document.documentElement.style.scrollBehavior = "smooth";
 
-    // Intersection Observer for scroll animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
@@ -28,7 +27,6 @@ export default function Home() {
       });
     }, observerOptions);
 
-    // Observe all elements with the animate-on-scroll class
     const animatedElements = document.querySelectorAll(".animate-on-scroll");
     animatedElements.forEach((el) => observer.observe(el));
 
@@ -39,25 +37,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
       <Navigation />
-
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* About Section */}
       <AboutSection />
-
-      {/* Education Section */}
       <EducationSection />
-
-      {/* Skills Section */}
       <SkillsSection />
-
-      {/* Projects Section */}
       <ProjectsSection />
-
-      {/* Contact Section */}
+      <Blog/>
       <ContactSection />
     </div>
   );

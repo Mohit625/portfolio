@@ -13,9 +13,9 @@ const ProjectsSection = () => {
       description:
         "Built an AI-powered telemedicine platform to match patient symptoms with specialists using dynamic symptom analysis.Used GeminiAI API for interpreting natural language symptoms and real-time doctor recommendations.",
       image: "https://i.pinimg.com/1200x/02/de/29/02de299d2fa8b1756697f75c32e0e51a.jpg",
-      tags: ["React", "JavaScript", "Shadcn"],
+      tags: ["React", "JavaScript", "Shadcn","Ongoing"],
       links: {
-        demo: "#",
+        demo: "https://github.com/Mohit625/medicare",
         github: "#",
       },
       category: "Application",
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       image: "https://i.pinimg.com/736x/48/08/89/480889539651e903ac414cc4b5c3c4fc.jpg",
       tags: ["Next.js", "Strapi", "Vercel"],
       links: {
-        demo: "#",
+        demo: "https://github.com/Mohit625/ecommerce",
         github: "#",
       },
       category: "Application",
@@ -39,17 +39,16 @@ const ProjectsSection = () => {
       image: "https://i.pinimg.com/736x/5d/19/3b/5d193bd932c23fd5619ef72b5eda3f48.jpg",
       tags: ["React", "Express", "MongoDB"],
       links: {
-        demo: "#",
+        demo: "https://github.com/Mohit625/blogopedia",
         github: "#",
       },
-      category: "Extension",
+      category: "Application",
     },
   ];
 
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Terminal prompt */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +59,6 @@ const ProjectsSection = () => {
           $ ls -la ./projects
         </motion.div>
 
-        {/* Section title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +69,6 @@ const ProjectsSection = () => {
           Selected Projects
         </motion.h2>
 
-        {/* Projects grid */}
         <div className="space-y-20">
           {projects.map((project, index) => (
             <motion.div
@@ -84,16 +81,13 @@ const ProjectsSection = () => {
                 index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
               }`}
             >
-              {/* Project image */}
               <motion.div
                 className={`${index % 2 === 1 ? "lg:col-start-2" : ""} relative`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className="relative aspect-video rounded-lg overflow-hidden bg-slate-900/50 border border-slate-700">
-                  {/* Placeholder for project image */}
                   <Image src={project.image} height={400} width={1000} alt="abc" className="object-fill"/>
-                  {/* Overlay on hover */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
@@ -133,7 +127,6 @@ const ProjectsSection = () => {
                 </div>
               </motion.div>
 
-              {/* Project content */}
               <motion.div
                 className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -154,7 +147,6 @@ const ProjectsSection = () => {
                   </p>
                 </div>
 
-                {/* Tech stack */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Badge
@@ -167,8 +159,6 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* Action buttons */}
-                <div className="flex space-x-4">
                   <Button asChild>
                     <a
                       href={project.links.demo}
@@ -179,17 +169,7 @@ const ProjectsSection = () => {
                       View Project
                     </a>
                   </Button>
-                  <Button variant="outline" asChild>
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Source
-                    </a>
-                  </Button>
-                </div>
+                 
               </motion.div>
             </motion.div>
           ))}

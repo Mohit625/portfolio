@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Twitter, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
+import { FileText } from "lucide-react";
 
 const ContactSection = () => {
   const socialLinks = [
@@ -41,7 +42,6 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Terminal prompt */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,6 @@ const ContactSection = () => {
           $ echo "get in touch"
         </motion.div>
 
-        {/* Section title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +63,6 @@ const ContactSection = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Message */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -113,10 +111,11 @@ const ContactSection = () => {
   <Button
     variant="outline"
     size="lg"
-    className=" border-muted-foreground text-muted-foreground hover:text-white hover:border-white"
+    className="gap-2 border-gray-300 dark:border-muted-foreground text-black dark:text-muted-foreground hover:text-white dark:hover:text-white hover:border-black dark:hover:border-white transition"
     asChild
   >
     <Link href="https://drive.google.com/file/d/1yV-f9NwzolLAB5SbAbafO3pD7A4rqFBd/view?usp=drivesdk" >
+    <FileText/>
       Resume
     </Link>
   </Button>
@@ -124,14 +123,13 @@ const ContactSection = () => {
 </div>
           </motion.div>
 
-          {/* Right side - Social links */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-slate-900/30 border-slate-700">
+            <Card className="bg-gray-100 dark:bg-slate-800/50 px-4 py-3 border-b border-gray-200 dark:border-slate-700">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold mb-6">Find me online</h3>
                 <div className="space-y-4">
@@ -181,7 +179,6 @@ const ContactSection = () => {
           </motion.div>
         </div>
 
-        {/* Footer */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

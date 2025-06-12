@@ -1,5 +1,5 @@
 "use client";
-
+import ThemeToggle from "@/components/ThemeToggle";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,7 @@ const navItems = [
   { id: "about", label: "about" },
   { id: "skills", label: "skills" },
   { id: "projects", label: "projects" },
+  { id: "blog", label: "blog" },
   { id: "contact", label: "contact" },
 ];
 
@@ -66,7 +67,6 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo / Home */}
           <motion.button
             onClick={() => scrollToSection("home")}
             className="text-lg font-mono font-semibold hover:text-primary transition-colors cursor-pointer"
@@ -77,7 +77,6 @@ const Navigation = () => {
             ./mohit
           </motion.button>
 
-          {/* Desktop Nav */}
           <ul className="hidden md:flex space-x-8">
             {navItems.slice(1).map((item) => (
               <motion.li key={item.id}>
@@ -104,8 +103,10 @@ const Navigation = () => {
               </motion.li>
             ))}
           </ul>
+          <div className="flex gap-1.5">
 
-          {/* Mobile Menu Button */}
+          <ThemeToggle/>
+
           <div className="md:hidden">
             <motion.button
               onClick={toggleMenu}
@@ -132,7 +133,6 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -149,7 +149,7 @@ const Navigation = () => {
                   key={item.id}
                   onClick={() => {
                     scrollToSection(item.id);
-                    setTimeout(() => setIsMobileMenuOpen(false), 600);
+                    setTimeout(() => setIsMobileMenuOpen(false), 800);
                   }}
                   className="text-sm font-medium transition-transform hover:scale-105 text-left cursor-pointer"
                 >
@@ -160,6 +160,7 @@ const Navigation = () => {
           </motion.div>
         )}
       </AnimatePresence>
+          </div>
     </motion.nav>
   );
 };

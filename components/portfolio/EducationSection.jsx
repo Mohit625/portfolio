@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 const EducationSection = () => {
   const education = [
@@ -41,7 +40,6 @@ const EducationSection = () => {
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Terminal prompt */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +50,6 @@ const EducationSection = () => {
           $ cat education.json
         </motion.div>
 
-        {/* Education Section */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +69,7 @@ const EducationSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-slate-900/30 border-slate-700 hover:bg-slate-900/50 transition-all duration-300">
+              <Card className="bg-white dark:bg-slate-900/50 border border-gray-200 dark:border-slate-700 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <h3 className="text-xl font-semibold text-foreground mb-2 lg:mb-0">
@@ -93,7 +90,6 @@ const EducationSection = () => {
           ))}
         </div>
 
-        {/* Certifications */}
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +106,7 @@ const EducationSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Card className="bg-slate-900/30 border-slate-700">
+          <Card className="bg-white dark:bg-slate-900/50 border border-gray-200 dark:border-slate-700 overflow-hidden">
             <CardContent className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <h4 className="text-lg font-semibold">Various Platforms</h4>

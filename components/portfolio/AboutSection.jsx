@@ -16,7 +16,6 @@ const tools = ['Figma', 'Linear', 'Arc']`;
   return (
     <section id="about" className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Terminal prompt */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +26,6 @@ const tools = ['Figma', 'Linear', 'Arc']`;
           $ cat about.md
         </motion.div>
 
-        {/* Section title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +37,6 @@ const tools = ['Figma', 'Linear', 'Arc']`;
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -60,16 +57,15 @@ const tools = ['Figma', 'Linear', 'Arc']`;
             </div>
           </motion.div>
 
-          {/* Right side - Code block */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-slate-900/50 border-slate-700 overflow-hidden">
+            <Card className="bg-white dark:bg-slate-900/50 border border-gray-200 dark:border-slate-700 overflow-hidden">
               <CardContent className="p-0">
-                <div className="bg-slate-800/50 px-4 py-3 border-b border-slate-700">
+                <div className="bg-gray-100 dark:bg-slate-800/50 px-4 py-3 border-b border-gray-200 dark:border-slate-700">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 rounded-full bg-red-500" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500" />

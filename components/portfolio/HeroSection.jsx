@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Github, Twitter } from "lucide-react";
-
+import image from "@/public/image.jpeg"
+import Image from "next/image";
 const HeroSection = () => {
   return (
     <section
@@ -74,7 +75,7 @@ const HeroSection = () => {
               <span>github</span>
             </a>
             <a
-              href="https://twitter.com/raunofreiberg"
+              href="https://x.com/MohitLalwa34919"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors flex items-center space-x-1"
@@ -98,13 +99,13 @@ const HeroSection = () => {
           >
             <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 bg-gradient-to-br from-primary/20 to-secondary/20">
               <div className="w-full h-full bg-muted-foreground/20 flex items-center justify-center">
-                <svg
-                  className="w-32 h-32 text-muted-foreground"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
+              <Image
+  src={image}
+  alt="Profile"
+  width={320}
+  height={320}
+  className="rounded-full object-cover"
+/>
               </div>
             </div>
 
