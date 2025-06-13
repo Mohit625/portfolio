@@ -17,12 +17,10 @@ export default function ThemeToggle() {
     // Return a placeholder with the same dimensions to avoid layout shift
     return (
       <button
-        aria-label="Toggle Dark Mode"
-        className="rounded p-2 hover:bg-muted transition"
-        disabled
+        aria-label="Loading theme toggle"
+        className="rounded p-2 hover:bg-muted transition opacity-50 cursor-not-allowed"
       >
-        <div className="w-6 h-6" />{" "}
-        {/* Placeholder with same dimensions as icons */}
+        <div className="w-6 h-6 bg-current opacity-20 rounded" />
       </button>
     );
   }
