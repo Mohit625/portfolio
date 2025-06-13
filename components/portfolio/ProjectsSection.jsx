@@ -12,8 +12,9 @@ const ProjectsSection = () => {
       title: "Medicare Telemedicine App",
       description:
         "Built an AI-powered telemedicine platform to match patient symptoms with specialists using dynamic symptom analysis.Used GeminiAI API for interpreting natural language symptoms and real-time doctor recommendations.",
-      image: "https://i.pinimg.com/1200x/02/de/29/02de299d2fa8b1756697f75c32e0e51a.jpg",
-      tags: ["React", "JavaScript", "Shadcn","Ongoing"],
+      image:
+        "https://i.pinimg.com/1200x/02/de/29/02de299d2fa8b1756697f75c32e0e51a.jpg",
+      tags: ["React", "JavaScript", "Shadcn", "Ongoing"],
       links: {
         demo: "https://github.com/Mohit625/medicare",
         github: "#",
@@ -24,7 +25,8 @@ const ProjectsSection = () => {
       title: "Ecommerce App",
       description:
         "Developed a full-featured e-commerce marketplace with product listings, dynamic cart and order tracking system, integrated secure Stripe payment flow and Cloudinary for optimized image storage and delivery.",
-      image: "https://i.pinimg.com/736x/48/08/89/480889539651e903ac414cc4b5c3c4fc.jpg",
+      image:
+        "https://i.pinimg.com/736x/48/08/89/480889539651e903ac414cc4b5c3c4fc.jpg",
       tags: ["Next.js", "Strapi", "Vercel"],
       links: {
         demo: "https://github.com/Mohit625/ecommerce",
@@ -36,7 +38,8 @@ const ProjectsSection = () => {
       title: "Bloggopedia",
       description:
         "Developed a scalable full-stack blogging platform featuring secure user authentication, complete CRUD operations, and real-time content updates to streamline content creation and enhance user interaction.",
-      image: "https://i.pinimg.com/736x/5d/19/3b/5d193bd932c23fd5619ef72b5eda3f48.jpg",
+      image:
+        "https://i.pinimg.com/736x/5d/19/3b/5d193bd932c23fd5619ef72b5eda3f48.jpg",
       tags: ["React", "Express", "MongoDB"],
       links: {
         demo: "https://github.com/Mohit625/blogopedia",
@@ -64,12 +67,12 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl font-bold mb-16"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16"
         >
           Selected Projects
         </motion.h2>
 
-        <div className="space-y-20">
+        <div className="space-y-12 sm:space-y-20">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -77,7 +80,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center ${
                 index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
               }`}
             >
@@ -87,7 +90,13 @@ const ProjectsSection = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className="relative aspect-video rounded-lg overflow-hidden bg-slate-900/50 border border-slate-700">
-                  <Image src={project.image} height={400} width={1000} alt="abc" className="object-fill"/>
+                  <Image
+                    src={project.image}
+                    height={400}
+                    width={1000}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
@@ -142,7 +151,7 @@ const ProjectsSection = () => {
                     </Badge>
                   </div>
 
-                  <p className="text-muted-foreground text-lg leading-relaxed">
+                  <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
                     {project.description}
                   </p>
                 </div>
@@ -159,17 +168,16 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                  <Button asChild>
-                    <a
-                      href={project.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Project
-                    </a>
-                  </Button>
-                 
+                <Button asChild>
+                  <a
+                    href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Project
+                  </a>
+                </Button>
               </motion.div>
             </motion.div>
           ))}
