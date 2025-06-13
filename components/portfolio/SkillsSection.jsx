@@ -116,8 +116,8 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="skills" className="py-12 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
