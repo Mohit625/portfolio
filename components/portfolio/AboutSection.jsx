@@ -31,12 +31,12 @@ const tools = ['Figma', 'Linear', 'Arc']`;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl font-bold mb-16"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16"
         >
           About
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,16 +44,23 @@ const tools = ['Figma', 'Linear', 'Arc']`;
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
               <p>
-              I'm a software engineer currently pursuing a B.Tech in Electrical Engineering at NIT Silchar. I specialize in building full-stack web applications with a focus on clean architecture, responsive design, and long-term scalability. I enjoy bringing ideas to life using technologies like React, Next.js, Tailwind CSS, and Node.js—crafting intuitive user interfaces backed by robust backend systems.
+                I'm a software engineer currently pursuing a B.Tech in
+                Electrical Engineering at NIT Silchar. I specialize in building
+                full-stack web applications with a focus on clean architecture,
+                responsive design, and long-term scalability. I enjoy bringing
+                ideas to life using technologies like React, Next.js, Tailwind
+                CSS, and Node.js—crafting intuitive user interfaces backed by
+                robust backend systems.
               </p>
 
               <p>
-              Beyond development, I actively engage in competitive programming and hackathons to sharpen my problem-solving skills. I'm also an active contributor to campus tech communities, where I collaborate with development teams and support technical events.
+                Beyond development, I actively engage in competitive programming
+                and hackathons to sharpen my problem-solving skills. I'm also an
+                active contributor to campus tech communities, where I
+                collaborate with development teams and support technical events.
               </p>
-
-             
             </div>
           </motion.div>
 
