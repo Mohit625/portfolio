@@ -28,6 +28,7 @@ export default function BlogSection() {
         >
           $ fetch blog
         </motion.div>
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +36,7 @@ export default function BlogSection() {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16"
         >
-          className="text-4xl lg:text-5xl font-bold mb-16">Latest Articles
+          Latest Articles
         </motion.h2>
 
         <div className="grid gap-6 sm:gap-8 md:gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -47,9 +48,7 @@ export default function BlogSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card
-                className={`border hover:scale-105 transition-all duration-300`}
-              >
+              <Card className="border hover:scale-105 transition-all duration-300">
                 <CardHeader>
                   <img
                     src={post.cover_image || post.social_image}
