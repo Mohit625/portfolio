@@ -34,7 +34,6 @@ const EducationSection = () => {
       platform: "Naukri Campus",
       color: "bg-red-500",
     },
-    
   ];
 
   return (
@@ -55,12 +54,12 @@ const EducationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl font-bold mb-16"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16"
         >
           Education
         </motion.h2>
 
-        <div className="space-y-8 mb-20">
+        <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-20">
           {education.map((edu, index) => (
             <motion.div
               key={index}
@@ -71,8 +70,8 @@ const EducationSection = () => {
             >
               <Card className="bg-white dark:bg-slate-900/50 border border-gray-200 dark:border-slate-700 transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-foreground mb-2 lg:mb-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-0">
                       {edu.degree}
                     </h3>
                     <span className="text-sm text-muted-foreground font-mono">
@@ -81,9 +80,10 @@ const EducationSection = () => {
                   </div>
                   <p className="text-sm text-primary mb-3 flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <span>{edu.institution}</span>
-                    <span className="text-muted-foreground">CGPA - {edu.grade}</span>
-                    </p>
-                 
+                    <span className="text-muted-foreground">
+                      CGPA - {edu.grade}
+                    </span>
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
