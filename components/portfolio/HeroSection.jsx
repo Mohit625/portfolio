@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Twitter } from "lucide-react";
-import image from "@/public/image.jpeg"
+import image from "@/public/image.jpeg";
 import Image from "next/image";
 const HeroSection = () => {
   return (
@@ -31,7 +31,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-5xl lg:text-7xl font-bold tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight"
             >
               mohit
               <br />
@@ -42,7 +42,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="space-y-2 text-lg text-muted-foreground max-w-2xl"
+              className="space-y-2 text-base sm:text-lg text-muted-foreground max-w-2xl"
             >
               <div className="flex items-center space-x-2">
                 <span className="text-green-400">&gt;</span>
@@ -97,15 +97,15 @@ const HeroSection = () => {
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="relative"
           >
-            <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 bg-gradient-to-br from-primary/20 to-secondary/20">
+            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary/20 bg-gradient-to-br from-primary/20 to-secondary/20">
               <div className="w-full h-full bg-muted-foreground/20 flex items-center justify-center">
-              <Image
-  src={image}
-  alt="Profile"
-  width={320}
-  height={320}
-  className="rounded-full object-cover"
-/>
+                <Image
+                  src={image}
+                  alt="Profile"
+                  width={320}
+                  height={320}
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
             </div>
 
