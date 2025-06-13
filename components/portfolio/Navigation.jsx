@@ -65,7 +65,7 @@ const Navigation = () => {
       role="navigation"
       aria-label="Main Navigation"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           <motion.button
             onClick={() => scrollToSection("home")}
@@ -86,7 +86,7 @@ const Navigation = () => {
                     "relative px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
                     activeSection === item.id
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
                   )}
                   aria-label={`Scroll to ${item.label}`}
                 >
@@ -96,7 +96,11 @@ const Navigation = () => {
                       layoutId="activeSection"
                       className="absolute inset-0 bg-primary/10 rounded-md"
                       initial={false}
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
                     />
                   )}
                 </button>
@@ -104,63 +108,62 @@ const Navigation = () => {
             ))}
           </ul>
           <div className="flex gap-1.5">
+            <ThemeToggle />
 
-          <ThemeToggle/>
-
-          <div className="md:hidden">
-            <motion.button
-              onClick={toggleMenu}
-              className="p-2 text-muted-foreground hover:text-foreground cursor-pointer"
-              aria-label="Toggle Mobile Menu"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div className="md:hidden">
+              <motion.button
+                onClick={toggleMenu}
+                className="p-2 text-muted-foreground hover:text-foreground cursor-pointer"
+                aria-label="Toggle Mobile Menu"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </motion.button>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </motion.button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            key="mobile-menu"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-t shadow-md overflow-hidden"
-          >
-            <nav className="flex flex-col space-y-2 px-4 py-4">
-              {navItems.slice(1).map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    scrollToSection(item.id);
-                    setTimeout(() => setIsMobileMenuOpen(false), 800);
-                  }}
-                  className="text-sm font-medium transition-transform hover:scale-105 text-left cursor-pointer"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-          </div>
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              key="mobile-menu"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden border-t shadow-md overflow-hidden"
+            >
+              <nav className="flex flex-col space-y-3 px-4 py-6">
+                {navItems.slice(1).map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => {
+                      scrollToSection(item.id);
+                      setTimeout(() => setIsMobileMenuOpen(false), 800);
+                    }}
+                    className="text-base font-medium transition-transform hover:scale-105 text-left cursor-pointer py-2 px-2 rounded-md hover:bg-background/50"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.nav>
   );
 };
