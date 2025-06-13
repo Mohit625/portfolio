@@ -28,7 +28,6 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -38,6 +37,7 @@ export default function RootLayout({ children }) {
             attribute="class"
             defaultTheme="dark"
             enableSystem
+            disableTransitionOnChange
           >
             <TooltipProvider>
               {children}
