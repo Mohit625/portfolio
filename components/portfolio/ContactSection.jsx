@@ -40,8 +40,8 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="contact" className="py-12 sm:py-20">
+      <div className="max-w-screen mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,12 +57,12 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl font-bold mb-16"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16"
         >
           Let's Connect
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +71,7 @@ const ContactSection = () => {
             className="space-y-6 "
           >
             <div className="space-y-4">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Always interested in hearing about new opportunities,
                 interesting projects, or just having a chat about technology and
                 design.
@@ -83,44 +83,43 @@ const ContactSection = () => {
                 you.
               </p>
             </div>
-<div className="flex space-x-4">
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90"
-                asChild
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
               >
-                <a href="mailto:mohitlalwani639@gmail.com">
-                  <Mail className="w-5 h-5 mr-2" />
-                  Send me an email
-                </a>
-              </Button>
-            </motion.div>
-            <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.5 }}
-  viewport={{ once: true }}
->
-  <Button
-    variant="outline"
-    size="lg"
-    className="gap-2 border-gray-300 dark:border-muted-foreground text-black dark:text-muted-foreground hover:text-white dark:hover:text-white hover:border-black dark:hover:border-white transition"
-    asChild
-  >
-    <Link href="https://drive.google.com/file/d/1yV-f9NwzolLAB5SbAbafO3pD7A4rqFBd/view?usp=drivesdk" >
-    <FileText/>
-      Resume
-    </Link>
-  </Button>
-</motion.div>
-</div>
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                  asChild
+                >
+                  <a href="mailto:mohitlalwani639@gmail.com">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Send me an email
+                  </a>
+                </Button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="gap-2 border-gray-300 dark:border-muted-foreground text-black dark:text-muted-foreground hover:text-white dark:hover:text-white hover:border-black dark:hover:border-white transition"
+                  asChild
+                >
+                  <Link href="https://drive.google.com/file/d/1yV-f9NwzolLAB5SbAbafO3pD7A4rqFBd/view?usp=drivesdk">
+                    <FileText />
+                    Resume
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -152,9 +151,7 @@ const ContactSection = () => {
                         <div className="font-medium text-foreground group-hover:text-current transition-colors">
                           {link.name}
                         </div>
-                        <div className="text-sm text-muted-foreground font-mono">
-                          {link.label}
-                        </div>
+                        
                       </div>
                       <div className="text-muted-foreground group-hover:text-current transition-colors">
                         <svg
