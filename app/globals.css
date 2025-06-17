@@ -142,8 +142,14 @@
   /* Smooth scrolling for all devices */
   html {
     scroll-behavior: smooth;
-  }
+    overflow-x: hidden;
+}
 
+body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
   /* Improve focus states for accessibility */
   button:focus-visible,
   a:focus-visible {

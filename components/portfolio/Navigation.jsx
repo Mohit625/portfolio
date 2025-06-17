@@ -146,7 +146,7 @@ const Navigation = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden border-t shadow-md overflow-hidden"
             >
-              <nav className="flex flex-col space-y-3 px-4 py-6">
+              <nav className="flex flex-col space-y-1 px-4 py-4">
                 {navItems.slice(1).map((item) => (
                   <button
                     key={item.id}
