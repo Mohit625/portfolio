@@ -10,7 +10,7 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center justify-center pt-20 pb-12 sm:pb-16"
     >
-      <div className="max-w-screen mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

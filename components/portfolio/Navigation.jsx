@@ -65,7 +65,7 @@ const Navigation = () => {
       role="navigation"
       aria-label="Main Navigation"
     >
-      <div className="max-w-screen mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           <motion.button
             onClick={() => scrollToSection("home")}

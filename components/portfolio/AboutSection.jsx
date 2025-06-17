@@ -15,7 +15,7 @@ const tools = ['Figma', 'Linear', 'Arc']`;
 
   return (
     <section id="about" className="py-12 sm:py-20">
-      <div className="max-w-screen mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
